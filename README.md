@@ -5,28 +5,26 @@
 
 ## Usage
 
+Clone, build, run!
 ```
-docker run --rm -it sshow/devenv bash
+git clone https://github.com/stigok/docker-devenv
+cd docker-devenv
+docker build -t devenv .
+docker run --rm -it devenv bash
 ```
 
 When you exit that bash instance, everything that was is no more
 
-## Build
-
-Clone repo, make edits, build image
-
-```
-git clone <repo> && cd <repo name>
-docker build -t sshow/devenv <repo name>
-```
-
 ## Gotchas
 
-- Using Node Version Manager (nvm) for installing selective Node.js version
+- Using latest Ubuntu image as base (16.04+)
+- Using Node Version Manager (nvm) for handling Node.js version
+- Username currently set to sshow (edit this in Dockerfile)
 
 ## TODO
 
 - Write a Makefile
+- Set custom username with env var on build
 
 ### Resources
 
