@@ -42,3 +42,5 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 RUN mkdir -p $HOME/repos
 WORKDIR $HOME/repos
+
+RUN echo "echo -e \"\nYou are fucking awesome\n\"" >> ~/.bashrc
