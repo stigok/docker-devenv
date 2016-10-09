@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     software-properties-common \
     wget \
     vim \
+    sudo \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -23,6 +24,9 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Setup user
 RUN useradd -m -U sshow
+RUN gpasswd -a sshow sudo
+RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/666_nopasswd
+
 USER sshow
 ENV HOME /home/sshow
 
