@@ -50,4 +50,4 @@ WORKDIR $HOME/repos
 # Add bash aliases
 COPY .bash_aliases $HOME/
 
-RUN echo "echo -e \"\nYou are fucking awesome\n\"" >> ~/.bashrc
+RUN echo "echo -e \"\nYou are fucking awesome\n\"" >> $HOME/.bashrc
