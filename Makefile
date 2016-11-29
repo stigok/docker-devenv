@@ -1,7 +1,8 @@
 #!/usr/bin/make -f
 
-version = 0.2
+IMAGE_VERSION = 0.2
 
 build:
-	docker build -t sshow/devenv:$(version) .
-	docker tag sshow/devenv:$(version) sshow/devenv:latest
+	#docker build --tag sshow/devenv:$(IMAGE_VERSION) .
+	docker build --build-arg NODE_VERSION=5.9.0 --build-arg NVM_VERSION=0.32.1 --tag sshow/devenv:$(IMAGE_VERSION) .
+	docker tag sshow/devenv:$(IMAGE_VERSION) sshow/devenv:latest
