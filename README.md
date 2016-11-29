@@ -21,11 +21,6 @@ When you exit that bash instance, everything that was is no more
 - Using Node Version Manager (nvm) for handling Node.js version
 - Username currently set to sshow (edit this in Dockerfile)
 
-## TODO
-
-- Write a Makefile
-- Set custom username with env var on build
-
 ### Resources
 
 - http://stackoverflow.com/questions/25899912/install-nvm-in-docker#28390848
