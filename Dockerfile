@@ -32,10 +32,10 @@ ENV HOME /home/sshow
 
 # Install NVM
 ENV NVM_DIR "$HOME/.nvm"
-ENV NODE_VERSION "6.7.0"
+ENV NODE_VERSION "6.9.1"
 
 # Install nvm with node and npm
-RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash \
+RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash \
     && source $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
