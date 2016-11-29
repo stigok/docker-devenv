@@ -44,10 +44,10 @@ ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules:$PATH
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 RUN echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" # This loads nvm" >> $HOME/.bashrc
 
+# Create default folder hierarchy
 RUN mkdir -p $HOME/repos
 WORKDIR $HOME/repos
 
-# Add bash aliases
+# Customize the installation
 COPY .bash_aliases $HOME/
-
 RUN echo "echo -e \"\nYou are fucking awesome\n\"" >> $HOME/.bashrc
