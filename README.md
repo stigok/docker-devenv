@@ -1,30 +1,27 @@
 # docker-devenv
 
-> Docker image for a simple disposable development environment container for
-> testing purposes and other goodies
+> Disposable development environment container for your disposable needs
 
 ## Usage
 
-Clone, build, run!
+Download and run this image from Docker Hub
+
 ```
-git clone https://github.com/stigok/docker-devenv
-cd docker-devenv
-docker build -t devenv .
-docker run --rm -it devenv bash
+docker run --rm -it sshow/devenv:latest
 ```
 
-When you exit that bash instance, everything that was is no more
+Or clone/download the repo and build one yourself
+
+```
+make build
+docker run -it devenv
+```
 
 ## Gotchas
 
-- Using latest Ubuntu image as base (16.04+)
-- Using Node Version Manager (nvm) for handling Node.js version
-- Username currently set to sshow (edit this in Dockerfile)
-
-## TODO
-
-- Write a Makefile
-- Set custom username with env var on build
+- Using `ubuntu:latest` as base
+- Using Node Version Manager (nvm) for installing Node.js and NPM
+- Username can be passed as `--build-arg USERNAME=user` to `docker build`
 
 ### Resources
 
