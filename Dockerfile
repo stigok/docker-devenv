@@ -42,6 +42,7 @@ RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v${NVM_VERSION}/i
     && nvm use default
 ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules:$PATH
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+RUN echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" # This loads nvm" >> $HOME/.bashrc
 
 RUN mkdir -p $HOME/repos
 WORKDIR $HOME/repos
