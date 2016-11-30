@@ -24,9 +24,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     vim \
     sudo \
     netcat \
-    net-tools \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    net-tools
 
 # Replace sh with bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
