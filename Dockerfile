@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     wget \
     vim \
     sudo \
+    netcat \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
