@@ -24,7 +24,9 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     vim \
     sudo \
     netcat \
-    net-tools
+    net-tools \
+    iputils-ping \
+    iproute2
 
 # Replace sh with bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
