@@ -23,8 +23,10 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     wget \
     vim \
     sudo \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    netcat \
+    net-tools \
+    iputils-ping \
+    iproute2
 
 # Replace sh with bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
