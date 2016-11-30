@@ -10,3 +10,6 @@ build:
 
 rebuild:
 	docker build --no-cache $(BUILD_ARGS)
+
+run:
+	docker run -it --rm -v devcontainer:/mnt/persistent $(IMAGE_NAME):$(IMAGE_VERSION)
